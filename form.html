@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://kit.fontawesome.com/bb6cd1e6ab.js" crossorigin="anonymous"></script>
+
+    <!-- styling with CSS -->
+<style>
+body{
+   font-family: Arial, Helvetica, sans-serif; 
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+header{
+    background-color:rgb(4, 4, 53);
+    color: white;
+    text-align: center;
+    padding: 2em;
+}
+
+.icon{
+    justify-content: center;
+    margin: auto;
+    gap: 10px;
+    display: flex;
+    font-size: 40px;
+}
+
+
+.icon a{
+    color: rgb(252, 250, 250);
+}
+
+h1{
+    font-size: 300%;
+}
+
+.profile-image{
+    display:flex;
+    justify-content:top left;
+    max-width: 30%;
+    height: auto;
+    border-radius: 5%;
+    margin:1px 0px 5px 0px;
+    top: 0;
+ }
+
+ section{
+    width: 60%;
+    height: 20%;
+    margin:0;
+    padding: 0;
+ }
+
+
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+label{
+    display: block;
+    margin-bottom:5px ;
+    font-size: 26px;
+    font-weight: 60px;
+    color:rgb(6,10.66);
+}
+
+input,textarea{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 1px;
+}
+
+button{
+    background-color:rgb(4, 4, 53);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+i:hover {
+    color: rgb(82, 26, 236); 
+}
+
+@media(max-width:600px){
+    form{
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <h1 class="container-fluid">EMMANAK SUPPORT</h1>
+        <!-- <h1>CONTACT US</h1> -->
+ <div class="icon">
+    <a href="https://amarteysweetie14@gmail.com"><i class="fa-solid fa-user"></i></a>
+    <a href="tel:+233577527616"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fa-brands fa-facebook"></i></a>
+    <a href="http://twitter.com/nii_amartey"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.tiktok.com/@"><i class="fa-brands fa-tiktok"></i></a>
+    <a href=""><i class="fa-solid fa-bars"></i></a>
+</div>
+
+<section>
+    <img class="profile-image"  src="images/EMMANAK SUPPORT LOGO BLUE.png" alt="emmanak support">
+</section>
+
+    </header>
+    <form id="registrationform" onsubmit="return validateForm()">
+<label for="name">Name</label>
+<input type="text" id="name" required placeholder="Enter your full name">
+
+<label for="Email">Email</label>
+<input type="text" id="email" required placeholder="Enter your email">
+
+<label for="messsages">Message</label>
+<textarea  id="Messages"  rows="10" required placeholder="Enter your message"></textarea>
+
+<label for="phone">Phone</label>
+<input type="tel" name="phone" id="phone" placeholder="Enter phone number">
+
+<label for="subject">subject</label>
+<input type="text" id="subject" placeholder="Enter subject">
+
+<label for="gender">Gender</label>
+<select name="gender" id="gender">
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+
+<label for="birthdate">Birthdate</label>
+<input type="date" id="birthdate" name="birthdate">
+
+<button type="submit">SUBMIT</button>
+
+    </form>
+
+    <div id="errormessage"></div>
+    
+    <script src="form.js"></script>
+</body>
+</html>
